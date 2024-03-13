@@ -1,0 +1,9 @@
+Student ID: 1 - Course ID: a - Mark: 16.0
+Student ID: 2 - Course ID: a - Mark: 17.0
+Student ID: 3 - Course ID: a - Mark: 12.0
+Student ID: 1 - Course ID: o - Mark: 18.0
+Student ID: 2 - Course ID: o - Mark: 14.0
+Student ID: 3 - Course ID: o - Mark: 12.0
+Student ID: 1 - Course ID: s - Mark: 18.5
+Student ID: 2 - Course ID: s - Mark: 15.8
+Student ID: 3 - Course ID: s - Mark: 9.9
