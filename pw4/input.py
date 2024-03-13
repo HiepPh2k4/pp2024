@@ -16,3 +16,4 @@ def input_courses(self):
         course_id = input(f"Enter course {j+1}'s ID: ")
         course_name = input(f"Enter course {j+1}'s name: ")
         self.courses.append(Course(course_id, course_name))
+        

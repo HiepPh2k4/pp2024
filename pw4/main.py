@@ -2,8 +2,8 @@ from input import input_stu_inf, input_courses
 from domains.marks import Marks
 
 m = Marks()
-m.input_stu_inf()
-m.input_courses()
+input_stu_inf(m)
+input_courses(m)
 m.list_courses()
 m.list_students()
 
