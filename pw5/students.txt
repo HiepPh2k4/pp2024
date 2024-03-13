@@ -2,3 +2,6 @@ Student ID: 1 - Student Name: hiep - DoB: 05/10/2004
 Student ID: 2 - Student Name: la - DoB: 03/02/2003
 Student ID: 3 - Student Name: duong - DoB: 01/06/2004
 Student ID: 4 - Student Name: hip - DoB: 11/11/2004
+Student ID: 22BI13160 - Student Name: ha - DoB: 1/2/1999
+Student ID: 22bi13170 - Student Name: duc - DoB: 1/2/1999
+Student ID: 7 - Student Name: ha - DoB: 13/03/2010

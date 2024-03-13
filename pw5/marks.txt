@@ -7,3 +7,4 @@ Student ID: 3 - Course ID: o - Mark: 12.0
 Student ID: 1 - Course ID: s - Mark: 18.5
 Student ID: 2 - Course ID: s - Mark: 15.8
 Student ID: 3 - Course ID: s - Mark: 9.9
+Student ID: 22BI13160 - Course ID: t - Mark: 15.0

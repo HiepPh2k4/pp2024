@@ -1,5 +1,9 @@
 from input import input_stu_inf, input_courses
 from domains.marks import Marks
+from compression import compress, decompress, check
+
+if check():
+    decompress()
 
 m = Marks()
 input_stu_inf(m)
@@ -35,3 +39,6 @@ while True:
         break
     else:
         print("Invalid choice")
+        
+compress()
+print("Compressed successfully")
