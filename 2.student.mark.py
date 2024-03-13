@@ -9,7 +9,7 @@ class Course:
         self.course_id = course_id
         self.course_name = course_name
 
-class MarkManagement:
+class Marks:
     def __init__(self):
         self.students = []
         self.courses = []
@@ -59,23 +59,23 @@ class MarkManagement:
         if course_id in self.marks:
             print(f"Student marks for course {course_id}:")
             for stu_id, mark in self.marks[course_id].items():
-                student_name = next((student.stu_name for student in self.students if student.stu_id == stu_id), 0)
+                student_name = next((student.stu_name for student in self.students if student.stu_id == stu_id), None)
                 print(f"Student Name: {student_name}, Student ID: {stu_id}, Mark: {mark}")
         else:
             print(f"No marks are found for course {course_id}")
 
-m = MarkManagement()
+m = Marks()
 m.input_stu_inf()
 m.input_courses()
 m.list_courses()
 m.list_students()
 
 while True:
-    print("\nPress 1 to input marks")
-    print("Press 2 to show student marks")
-    print("Press 3 to quit")
+    print("\n1: Input marks")
+    print("2: Show student marks")
+    print("3: Quit")
 
-    choice = input("Enter 1 to 3: ")
+    choice = input("Enter 1 -> 3: ")
     if choice == '1':
         m.input_marks()
     elif choice == '2':
