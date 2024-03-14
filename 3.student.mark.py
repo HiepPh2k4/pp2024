@@ -63,11 +63,11 @@ class Marks:
         if course_id in self.marks:
             print(f"Student marks for course {course_id}:")
             for stu_id, mark in self.marks[course_id].items():
-                student_name = next((student.stu_name for student in self.students if student.stu_id == stu_id), None)
-                print(f"Student ID: {stu_id}, Student Name: {student_name}, Mark: {mark}")
-        else:
-            print(f"No marks are found for course {course_id}")
-
+                for student in self.students:
+                    if student.stu_id == stu_id:
+                        student_name = student.stu_name
+                        print(f"Student Name: {student_name}, Student ID: {stu_id}, Mark: {mark}")
+ 
     def cal_gpa(self, course_id):       
         marks = np.array(list(self.marks[course_id].values()))
         credits = np.ones_like(marks)
@@ -109,8 +109,10 @@ while True:
         course_id = input("Enter course ID: ")
         sorted_stu = m.sorted_gpa(course_id)
         for stu_id, mark in sorted_stu:
-            student_name = next((student.stu_name for student in m.students if student.stu_id == stu_id), None)
-            print(f"Student ID: {stu_id}, Student Name: {student_name}, GPA: {m.marks[course_id][stu_id]:.1f}")
+            for student in m.students:
+                if student.stu_id == stu_id:
+                    student_name = student.stu_name
+                    print(f"Student ID: {stu_id}, Student Name: {student_name}, GPA: {m.marks[course_id][stu_id]:.1f}")
     elif choice == '5':
         break
     else:
