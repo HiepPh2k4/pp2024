@@ -81,6 +81,7 @@ class Marks:
         sorted_stu = sorted(self.marks[course_id].items(), key=lambda x: self.marks[course_id][x[0]], reverse=True)
         return sorted_stu
 
+
 m = Marks()
 m.input_stu_inf()
 m.input_courses()
