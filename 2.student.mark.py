@@ -59,10 +59,10 @@ class Marks:
         if course_id in self.marks:
             print(f"Student marks for course {course_id}:")
             for stu_id, mark in self.marks[course_id].items():
-                student_name = next((student.stu_name for student in self.students if student.stu_id == stu_id), None)
-                print(f"Student Name: {student_name}, Student ID: {stu_id}, Mark: {mark}")
-        else:
-            print(f"No marks are found for course {course_id}")
+                for student in self.students:
+                    if student.stu_id == stu_id:
+                        student_name = student.stu_name
+                        print(f"Student Name: {student_name}, Student ID: {stu_id}, Mark: {mark}")
 
 m = Marks()
 m.input_stu_inf()
