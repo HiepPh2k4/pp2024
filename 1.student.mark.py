@@ -37,6 +37,7 @@ def list_courses():
         print(f"Course ID: {course[0]}, Course Name: {course[1]}")
 
 def list_stu():
+    print("--------------------------------")    
     print("List of students:")
     for student in students:
         print(f"Student ID: {student[0]}, Student Name: {student[1]}, DoB: {student[2]}")
@@ -47,11 +48,11 @@ def show_stu_marks():
     if course_id in marks:
         print(f"Student marks for course {course_id}:")
         for stu_id, mark in marks[course_id].items():
-            student_name = next((student[1] for student in students if student[0] == stu_id), None)
-            print(f"Student Name: {student_name}, Student ID: {stu_id}, Mark: {mark}")
-    else:
-        print(f"No marks are found for course {course_id}")
-
+            for student in students:
+                if (student[0] == stu_id):
+                    student_name = student[1] 
+                    print(f"Student ID: {stu_id}, Student Name: {student_name}, Mark: {mark}")
+                    
 input_stu_inf()
 input_courses()
 list_courses()
